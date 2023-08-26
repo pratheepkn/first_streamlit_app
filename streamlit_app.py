@@ -62,12 +62,10 @@ streamlit.header('Fruityvice fruit advice!')
 try:
   fruit_choice = streamlit.text_input('What fruit would like to information about?')
   if not fruit_choice:
-    streamlit.error("Please select a fruit to get information.")
+     streamlit.error("Please select a fruit to get information.")
   else:
-    back_from_function = get_fruityvice_data(fruit_choice)
-    streamlit.dataframe(back_from_function)
- 
-
+     back_from_function = get_fruityvice_data(fruit_choice)
+     streamlit.dataframe(back_from_function)
 #Connect with snowflake
 #my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 #my_cur = my_cnx.cursor()
